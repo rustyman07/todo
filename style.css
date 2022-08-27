@@ -1,0 +1,169 @@
+ :root{
+  --primary: #990000 ;
+ }
+*,::after,::before{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+  body{
+font-family:  Helvetica, sans-serif;
+color: var(--lightblack);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #FCC19D;
+
+  }
+
+.container{
+  display: flex;
+    width: 500px;
+    height: 650px;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    overflow-y: scroll;
+
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+  }
+  
+.wrapper{
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+}
+.wrapper h1{
+color:#fff;
+margin-bottom: 20px;
+font-size: 24px;
+}
+header{
+  background-color: var(--primary);
+  padding: 20px 35px;
+  text-align: center;
+  height: 150px;
+
+}
+.todo-form{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+}
+.todo-input{
+  flex:1;
+  padding: 20px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #F0F2F5;
+  border: none;
+  font-size: 20px;
+
+}
+.show{
+  padding: 5px;
+  font-size: 12px;
+  color: #ffcc00;
+}
+.todo-list{
+  min-height: calc(100% - 150px);
+   width: 100%;
+   padding: 20px;
+   border-top-left-radius: 25px;
+   background-color: #F0F2F5;
+}
+.todo:nth-of-type(1){
+ margin-top: 30px;
+}
+button{
+  cursor: pointer;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+
+}
+button:hover{
+  background-color: #660000;
+}
+.todo-add-btn{
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-7px,7px);
+
+ padding: 0;
+}
+.delete-todo{
+width: 35px;
+padding: 8px;
+margin-right: 10px;
+}
+.fa-plus,.fa-solid{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  pointer-events: none;
+}
+
+.todo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #dedfe4;
+    border-left: 5px solid var(--primary);
+    margin: 10px 0;
+    position: relative;
+  
+  }
+.list{
+  flex:1;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 10px;
+  
+}
+.todo::before{
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  left: -3px;
+  top:50%;
+  transform: translate(-50% , -50%);
+  background-color:  var(--primary);
+
+}
+.check-box{
+
+  width: 20px;
+  height: 20px;
+accent-color: limegreen;
+  outline: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.completed {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.completed .list{
+  text-decoration: line-through;
+}
